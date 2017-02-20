@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Estimate Range from Mil Measurement</title>
+    <!-- <script data-main="app" src="lib/require.js"></script> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One|Hind+Vadodara:500" rel="stylesheet" type="text/css">
+    <link href="css/owfont-regular.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#">Estimate Range from Mil Measurement</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button type="button" class="btn btn-primary">Imperial</button></li>
+                    <li><button type="button" class="btn btn-danger">Metric</button></li>
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="starter-template">
+          <h1></h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-4">
+                        <form>
+                            <!-- <label for="InputMilHeight">Mil Height</label> -->
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="InputMilHeight" placeholder="Mil Height">
+
+                                    <select class="form-control">
+                            <option>Centimeters</option>
+                            <option>Meters</option>
+                            <option>Inches</option>
+                            <option>Feet</option>
+                          </select>
+                                </div>
+                            </div>
+
+                            <!-- <label for="InputMilWidth">Mil Width</label> -->
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="InputMilWidth" placeholder="Mil Width">
+
+
+                                    <select class="form-control">
+                            <option>Centimeters</option>
+                            <option>Meters</option>
+                            <option>Inches</option>
+                            <option>Feet</option>
+                          </select>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- <label for="InputTargetHeight">Target Height</label> -->
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InputTargetHeight" placeholder="Target Height">
+
+                                <select class="form-control">
+                          <option>Centimeters</option>
+                          <option>Meters</option>
+                          <option>Inches</option>
+                          <option>Feet</option>
+                        </select>
+                            </div>
+                        </div>
+
+                        <!-- <label for="InputTargetWidth">Target Width</label> -->
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InputTargetWidth" placeholder="Target Width">
+
+
+                                <select class="form-control">
+                          <option>Centimeters</option>
+                          <option>Meters</option>
+                          <option>Inches</option>
+                          <option>Feet</option>
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <!-- <label for="InputRangeDialHeight">Range and Dial Height</label> -->
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InputRangeHeight" placeholder="Range Height">
+
+                                <select class="form-control">
+                          <option>Feet</option>
+                          <option>Yards</option>
+                        </select>
+                            </div>
+                        </div>
+
+                        <!-- <label for="InputDialHeight">Dial/Hold Height</label> -->
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InputDialHeight" placeholder="Dial/Hold Height">
+
+
+                                <select class="form-control">
+                          <option>Mil</option>
+                          <option>MOA</option>
+                        </select>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <button type="submit" class="btn btn-lg btn-default btn-block">Submit</button>
+                        </div>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
