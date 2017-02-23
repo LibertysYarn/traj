@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link href="https://fonts.googleapis.com/css?family=Nixie+One|Hind+Vadodara:500" rel="stylesheet" type="text/css">
-  <link href="css/owfont-regular.css" rel="stylesheet" type="text/css">
+  <!-- <link href="css/owfont-regular.css" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,10 +38,10 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <button type="button" class="btn btn-primary">Imperial</button>
+            <button type="button" id="setUnitImp" class="btn btn-primary">Imperial</button>
           </li>
           <li>
-            <button type="button" class="btn btn-danger">Metric</button>
+            <button type="button" id="setUnitMetric" class="btn btn-danger">Metric</button>
           </li>
 
         </ul>
@@ -58,68 +58,76 @@
         <div class="col-sm-12">
           <div class="col-sm-4">
             <form>
-              <!-- <label for="InputMilHeight">Mil Height</label> -->
-              <div class="input-group">
-                <input type="email" class="form-control" id="InputMilHeight" placeholder="Mil Height">
+              <label for="InputMilHeight">Mil Data</label>
+              <div class="input-group" role="group">
+                <input type="number" class="form-control" id="InputMilHeight" placeholder="Mil Height" aria-label="Mil Height">
+                <span class="input-group-addon">height</span>
                 <div class="input-group-btn">
-                  <button type="button" class="btn btn-default">CM</button>
-                  <button type="button" class="btn btn-default">M</button>
-                  <button type="button" class="btn btn-default">IN</button>
-                  <button type="button" class="btn btn-default">FT</button>
+                  <button type="button" class="btn btn-default unit metric cm">CM</button>
+                  <button type="button" class="btn btn-default unit metric mt">M</button>
+                  <button type="button" class="btn btn-default unit imp inch">IN</button>
+                  <button type="button" class="btn btn-default unit imp ft">FT</button>
                 </div>
               </div>
+            </form>
+            <form>
 
               <!-- <label for="InputMilWidth">Mil Width</label> -->
               <div class="input-group">
-                <input type="email" class="form-control" id="InputMilWidth" placeholder="Mil Width">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default">CM</button>
-                  <button type="button" class="btn btn-default">M</button>
-                  <button type="button" class="btn btn-default">IN</button>
-                  <button type="button" class="btn btn-default">FT</button>
+                <input type="number" class="form-control" id="InputMilWidth" placeholder="Mil Width" aria-label="Mil Width">
+                <span class="input-group-addon">width</span>
+                <div class="input-group-btn" role="group">
+                  <button type="button" class="btn btn-default unit metric cm">CM</button>
+                  <button type="button" class="btn btn-default unit metric mt">M</button>
+                  <button type="button" class="btn btn-default unit imp inch">IN</button>
+                  <button type="button" class="btn btn-default unit imp ft">FT</button>
                 </div>
               </div>
+            </form>
 
           </div>
           <div class="col-sm-4">
-            <!-- <label for="InputTargetHeight">Target Height</label> -->
-            <div class="input-group">
-              <input type="email" class="form-control" id="InputTargetHeight" placeholder="Target Height">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default">CM</button>
-                <button type="button" class="btn btn-default">M</button>
-                <button type="button" class="btn btn-default">IN</button>
-                <button type="button" class="btn btn-default">FT</button>
+            <label for="InputTargetHeight">Target Data</label>
+            <div class="input-group" role="group">
+              <input type="number" class="form-control" id="InputTargetHeight" placeholder="Target Height" aria-label="Target Height">
+              <span class="input-group-addon height">height</span>
+              <div class="input-group-btn" data-toggle="buttons">
+                <button type="button" class="btn btn-default unit metric cm">CM</button>
+                <button type="button" class="btn btn-default unit metric mt">M</button>
+                <button type="button" class="btn btn-default unit imp in">IN</button>
+                <button type="button" class="btn btn-default unit imp ft">FT</button>
               </div>
             </div>
             <!-- <label for="InputTargetWidth">Target Width</label> -->
             <div class="input-group">
-              <input type="email" class="form-control" id="InputTargetWidth" placeholder="Target Width">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default">CM</button>
-                <button type="button" class="btn btn-default">M</button>
-                <button type="button" class="btn btn-default">IN</button>
-                <button type="button" class="btn btn-default">FT</button>
+              <input type="number" class="form-control" id="InputTargetWidth" placeholder="Target Width" aria-label="Target Width">
+              <span class="input-group-addon width">width</span>
+              <div class="input-group-btn" role="group" data-toggle="buttons">
+                <button type="radio" class="btn btn-default unit metric cm">CM</button>
+                <button type="radio" class="btn btn-default unit metric mt">M</button>
+                <button type="radio" class="btn btn-default unit imp in">IN</button>
+                <button type="radio" class="btn btn-default unit imp ft">FT</button>
               </div>
             </div>
           </div>
+
           <div class="col-sm-4">
 
-            <!-- <label for="InputRangeDialHeight">Range and Dial Height</label> -->
+            <label for="InputRangeDialHeight">Range and Dial/Hold Data</label>
             <div class="input-group">
-              <input type="email" class="form-control" id="InputRangeHeight" placeholder="Range Height">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default">FT</button>
-                <button type="button" class="btn btn-default">YD</button>
+              <input type="number" class="form-control" id="InputRangeHeight" placeholder="Range Height">
+              <div class="input-group-btn" role="group">
+                <button type="button" class="btn btn-default unit imp">FT</button>
+                <button type="button" class="btn btn-default unit imp">YD</button>
               </div>
             </div>
 
             <!-- <label for="InputDialHeight">Dial/Hold Height</label> -->
             <div class="input-group">
-              <input type="email" class="form-control" id="InputDialHeight" placeholder="Dial/Hold Height">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default">Mil</button>
-                <button type="button" class="btn btn-default">Moa</button>
+              <input type="number" class="form-control" id="InputDialHeight" placeholder="Dial/Hold Height">
+              <div class="input-group-btn" role="group">
+                <button type="button" class="btn btn-default unit">Mil</button>
+                <button type="button" class="btn btn-default unit">Moa</button>
               </div>
             </div>
           </div>
@@ -129,30 +137,13 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
+            <br />
             <button type="submit" class="btn btn-lg btn-default btn-block">Submit</button>
           </div>
         </div>
         </form>
 
       </div>
-    </div>
-
-    <div>
-      <fieldset>
-        <legend>Select Unit</legend>
-        <label for="inch">
-          <input type="radio" checked value="inch" id="inch" name="TgtHgtUnit" /> Inch
-        </label>
-        <label for="yard">
-          <input type="radio" value="yard" id="yard" name="TgtHgtUnit" /> Yard
-        </label>
-        <label for="cm">
-          <input type="radio" value="cm" id="cm" name="TgtHgtUnit" /> Cm
-        </label>
-        <label for="meter">
-          <input type="radio" value="meter" id="meter" name="TgtHgtUnit" /> Meter
-        </label>
-      </fieldset>
     </div>
 
     <!-- /container -->
@@ -166,9 +157,9 @@
       window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
+    <script src="js/index.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="js/ie10-viewport-bug-workaround.js"></script> -->
 </body>
 
 </html>
