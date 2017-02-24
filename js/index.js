@@ -14,12 +14,12 @@ document.getElementById("InputTargetWidth").defaultValue = 18;
 document.getElementById("InputTargetHeight").defaultValue = 24;
 
 let eQ = {
-  MilWidth: 0,
-  MilHeight: 0,
+  MilWidth: [],
+  MilHeight: [],
   TargetWidth: [],
   TargetHeight: [],
-  range: 0,
-  dial: 0
+  range: [],
+  dial: []
 };
 
 
@@ -32,11 +32,8 @@ $('.unit').click(function() {
   var value = $(event.target).closest('.input-group').find('.form-control').val();
   addon.text(unit + ' ' + addonText);
 
-  var x   = math.unit(value, unit);
-  var str = [x];
-  eQ[typeOfThing] = str;
-  console.log(str);
-  console.log(typeOfThing + ' ' + value + ' ' + unit);
+  var valueOfInput = JSON.parse(JSON.stringify(math.unit(value, unit)));
+  eQ[typeOfThing] = ([valueOfInput.value, valueOfInput.unit]);
   console.log(eQ);
 
 });
