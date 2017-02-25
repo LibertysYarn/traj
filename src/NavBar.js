@@ -5,7 +5,7 @@ class NavBar extends Component {
     return (
       <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
-              <div class="navbar-header">  
+              <div class="navbar-header">
                   <a class="navbar-brand" href="#">Estimate Range from Mil Measurement</a>
               </div>
               <div id="navbar" class="navbar-collapse collapse">

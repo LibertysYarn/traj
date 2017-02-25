@@ -1,18 +1,70 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
-        <!-- Notice the use of %PUBLIC_URL% in the tag above. It will be replaced with the URL of the `public` folder during the build. Only files inside the `public` folder can be referenced from the HTML. Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico"
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+  <!-- Notice the use of %PUBLIC_URL% in the tag above. It will be replaced with the URL of the `public` folder during the build. Only files inside the `public` folder can be referenced from the HTML. Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico"
         will work correctly both with client-side routing and a non-root public URL. Learn how to configure a non-root public URL by running `npm run build`. -->
-        <title>React App</title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <!-- This HTML file is a template. If you open it directly in the browser, you will see an empty page. You can add webfonts, meta tags, or analytics to this file. The build step will place the bundled scripts into the <body> tag.
+  <title>Traj App</title>
+  <!-- <script data-main="app" src="lib/require.js"></script> -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Nixie+One|Hind+Vadodara:500" re </head> -->
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Estimate Range from Mil Measurement</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button type="button" class="btn btn-primary">Imperial</button></li>
+                    <li><button type="button" class="btn btn-danger">Metric</button></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <br /><br /><br /><br />
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div id="root"></div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- This HTML file is a template. If you open it directly in the browser, you will see an empty page. You can add webfonts, meta tags, or analytics to this file. The build step will place the bundled scripts into the <body> tag.
 
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
-    --></body>
+    -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.7/react-bootstrap.min.js"></script>
+    <!-- <script src="js/docs.min.js"></script>  -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+
 </html>

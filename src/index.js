@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-import CommentBox from './CommentBox';
-import range from './range';
-import windage from './windage';
+import TargetRanegBox from './TargetRangeBox';
+// import NavBar from './NavBar';
+
 
 ReactDOM.render(
-  <CommentBox />,
+  <TargetRanegBox />,
   document.getElementById('root')
 );
