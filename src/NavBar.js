@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
+import './style.css';
 
 class NavBar extends Component {
   render() {
-    return (
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-              <div class="navbar-header">
-                  <a class="navbar-brand" href="#">Estimate Range from Mil Measurement</a>
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><button type="button" class="btn btn-primary">Imperial</button></li>
-                      <li><button type="button" class="btn btn-danger">Metric</button></li>
-
-                  </ul>
-              </div>
-
+return(
+  <nav className="navbar navbar-inverse navbar-fixed-top">
+      <div className="container">
+          <div className="navbar-header">
+              <a className="navbar-brand" href="#"><img src="./logo.png"></img></a>
           </div>
-      </nav>
+          <div id="navbar" className="navbar-collapse collapse">
+              <ul className="nav navbar-nav navbar-right">
+                  <li><button type="button" className="btn btn-primary">Imperial</button></li>
+                  <li><button type="button" className="btn btn-danger">Metric</button></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+   );
+ }
+};
 
-    );
-  }
-}
 
 export default NavBar;
