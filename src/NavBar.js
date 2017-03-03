@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './logo.png';
 import './style.css';
 
 class NavBar extends Component {
@@ -7,7 +8,8 @@ return(
   <nav className="navbar navbar-inverse navbar-fixed-top">
       <div className="container">
           <div className="navbar-header">
-              <a className="navbar-brand" href="#"><img src="./logo.png"></img></a>
+            <a className="navbar-brand">
+              <img src={logo} className="logo" alt="logo" /></a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav navbar-right">
@@ -17,7 +19,7 @@ return(
           </div>
       </div>
   </nav>
-   );
+  );
  }
 };
 

@@ -1,8 +1,22 @@
-
 .navbar-inverse {
   background-color: #b9121b;
 }
-.navbar-brand {
-color: #FFF;
+.logo {
+  height: 33px;
+  width: 120px;
+  margin-top: -7px;
 }
+.btn {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.btn-danger {
+  background-color: #0b736e;
+  border-color: #0b736e;
+}
+.btn-primary {
+  background-color: #0d8b84;
+  border-color: #0d8b84;
+}
+
 /* #0d8b84 complimentary color - #0b736e */
