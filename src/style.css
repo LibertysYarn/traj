@@ -6,7 +6,7 @@
   width: 120px;
   margin-top: -7px;
 }
-.btn {
+.btn-top {
   margin-right: 8px;
   margin-top: 8px;
 }
@@ -20,3 +20,39 @@
 }
 
 /* #0d8b84 complimentary color - #0b736e */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+}
+body {
+  background: snow;
+  padding: 26px 0;
+}
+h1 {
+  color: white;
+  font-size: 90px;
+  font-weight: 100;
+}
+.myForm {
+  background: white;
+  box-shadow: 0 0 15px -5px rgba(153, 153, 153, 0.9);
+  /*box-shadow: 0 1px 3px rgba(128,128,128,.2);*/
+  display: inline-block;
+}
+form {
+  padding: 10px 0 10px 10px;
+  border: #000 1px;
+}
+label-name {
+  color: #a7a7a7;
+  font-size: 13px;
+}
+input[type='submit'] {
+  clear: both;
+  float: left;
+  margin-bottom: 0;
+}
+fieldset {
+  margin-bottom: 26px;
+}

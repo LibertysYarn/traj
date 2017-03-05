@@ -13,8 +13,8 @@ return(
           </div>
           <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav navbar-right">
-                  <li><button type="button" className="btn btn-primary">Imperial</button></li>
-                  <li><button type="button" className="btn btn-danger">Metric</button></li>
+                  <li><button type="button" className="btn btn-top btn-primary">Imperial</button></li>
+                  <li><button type="button" className="btn btn-top btn-danger">Metric</button></li>
               </ul>
           </div>
       </div>
