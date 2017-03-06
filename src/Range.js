@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Dropdown from './dropdown';
 import InputGroup from './inputGroup';
-// var inputs = [["Centimeter", "cm"], ["Meter", "m"], ["Inch", "in"], ["Feet", "ft"]];
+
+//used to create button group below
 var Up = [ ["Feet", "ft"],["Yard", "yd"] ];
 var Range = [["Mil", "mil"],["MOA", "moa"]];
 
+//event handler for buttons used in this form
 class ResultsForm extends Component {
  constructor(props) {
  super(props);
@@ -33,14 +35,15 @@ class ResultsForm extends Component {
  //we will be tying this into the POST method in a bit
  }
 
-
+//Renders the reusable inputGroup and Dropdown button group with assigned variables to the results from the calcualtions from hte Mil and Target forms
+//TODO tie to POST, calculate and assign results field
   render() {
     return (
-      <div className="col-sm-12 myForm">
+      <div className="col-sm-4 myForm">
         <form onSubmit={ this.handleSubmit }>
           <fieldset>
            <legend>Show Results</legend>
-           <div className="col-sm-6">
+
             <div className="form-inline">
                <div className="form-group">
                  <InputGroup
@@ -58,8 +61,7 @@ class ResultsForm extends Component {
 
                      </div>
                      </div>
-                  </div>
-                   <div className="col-sm-6">
+
                        <div className="form-inline">
                          <div className="form-group">
                            <InputGroup
@@ -77,7 +79,7 @@ class ResultsForm extends Component {
 
                                </div>
                          </div>
-                       </div>
+                  
                      </fieldset>
 
                      </form>

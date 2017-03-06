@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Dropdown from './dropdown';
 import InputGroup from './inputGroup';
+//used to render the button group below
 var inputs = [["Centimeter", "cm"], ["Meter", "m"], ["Inch", "in"], ["Feet", "ft"]];
-// var units = ["cm", "m", "in", "ft"];
 
+//event handler for buttons used in this form
 class TargetForm extends Component {
  constructor(props) {
  super(props);
@@ -12,7 +13,7 @@ class TargetForm extends Component {
  this.handleTargetHeightUnitChange = this.handleTargetHeightUnitChange.bind(this);
  this.handleTargetWidthChange = this.handleTargetWidthChange.bind(this);
  this.handleTargetWidthUnitChange = this.handleTargetWidthUnitChange.bind(this);
- this.handleSubmit = this.handleSubmit.bind(this);
+ // this.handleSubmit = this.handleSubmit.bind(this);
  }
  handleTargetHeightChange(e) {
  this.setState({ targetHeight: e.target.value });
@@ -26,21 +27,20 @@ class TargetForm extends Component {
  handleTargetWidthUnitChange(e){
    this.setState({ targetWidthUnit: e.target.value });
  }
- handleSubmit(e) {
- e.preventDefault();
- console.log(`${this.state.targetHeight} said “${this.state.targetWidth}”`)
+ // handleSubmit(e) {
+ // e.preventDefault();
+ // console.log(`${this.state.targetHeight} said “${this.state.targetWidth}”`)
  //we will be tying this into the POST method in a bit
- }
+ // }
 
-
+//TODO tie to POST, calculate for vertical and horizontal, tie to Mil for calculations
+//Renders the reusable inputGroup and Dropdown button group with assigned variables the target form-group
   render() {
     return (
-      <div className="col-sm-8 myForm">
-        <form onSubmit={ this.handleSubmit }>
+      <div className="col-sm-4 myForm">
+        <form >
           <fieldset>
            <legend>Enter Targets</legend>
-           <div className="col-sm-12">
-
 
             <div className="form-inline">
                <div className="form-group">
@@ -48,20 +48,22 @@ class TargetForm extends Component {
                    id='targetHeight'
                    type='number'
                    title='Target Height'
+                   step='0.1'
+                   min='0.1'
+                   max='99'
+                   size='3'
+                   maxLength='5'
+                   defaultValue='24'
                    value={ this.state.id }
                    onChange={ this.handleTargetHeightChange }/>
 
                    <Dropdown
-                       id={this.unit}
-                       title={ this.placeholder }
+                       name='TgtHgtUnit'
                        options={inputs}
-                       handleChange={this.handleTargetHeightUnitChange.bind(this)}/>
-
-   </div>
+                       value={this.state.value}/>
                      </div>
-                  </div>
-                  <div className="col-sm-12">
 
+                     </div>
 
                     <div className="form-inline">
                        <div className="form-group">
@@ -69,18 +71,23 @@ class TargetForm extends Component {
                              id='TargetWidth'
                              type='number'
                              title='Target Width'
+                             step='0.1'
+                             min='0.1'
+                             max='99'
+                             size='3'
+                             maxLength='5'
+                             defaultValue='18'
                              value={ this.state.id }
                              onChange={ this.handleTargetWidthChange } />
 
 
                                <Dropdown
-                                 id={this.unit}
-                                 title={ this.placeholder }
                                  options={inputs}
-                                 handleChange={this.handleTargetWidthUnitChange.bind(this)}/>
+                                 name='TgtWidthUnit'
+                                 value={this.state.value}/>
 </div>
                        </div>
-                       </div>
+
                      </fieldset>
 
                      </form>

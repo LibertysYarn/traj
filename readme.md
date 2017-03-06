@@ -1,1 +1,1 @@
-![screenshot]https://github.com/LibertysYarn/traj/traj-screenshot.png  
+![Screenshot](https://github.com/LibertysYarn/traj/traj-screenshot.png) 

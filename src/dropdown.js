@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
 
-
+//TODO allow only one to be selected
+//Reusable button group creation form that calls on a nested array for name and value
 class Dropdown extends Component {
+  constructor(props){
+      super(props);
+      this.state = {unit: ''};
+      this.handleChange = this.handleChange.bind(this);
+   }
+
+   handleChange(e) {
+     this.setState({ unit: e.target.value });
+   };
   render() {
     return (
-        // <span className="input-group">
-        //             <input type='radio' id={this.props.id} name={this.props.id}>
-        //                 {this.props.options.map(function(option, i) {
-        //                     return <checked key={i}>{option}</checked>
-        //                 })}
-        //             </input>
-        //
-        //           </span>
-
-        //  checked={ this.state.options === value }
-        //  onChange={ /* You'll need an event function here */ }
-<span>
+      <span className="btn-group">
            { this.props.options.map(([text, value], i) => (
 
-   	    <button type="button" className="btn btn-default" key={ i }
-   	      value={ value } >
-       	    { text }</button>
+   	    <button type="button" className="btn btn-default" id={ text } key={ text }
+   	      value={ value } onclick={this.handleChange}>
+       	    { value }</button>
 
            ))
          }
-</span>
+       </span>
             );
 
 }
