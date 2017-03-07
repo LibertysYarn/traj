@@ -6,19 +6,19 @@ class Dropdown extends Component {
   constructor(props){
       super(props);
       this.state = {unit: ''};
-      this.handleChange = this.handleChange.bind(this);
+      // this.handleChange = this.handleChange.bind(this);
    }
-
-   handleChange(e) {
-     this.setState({ unit: e.target.value });
-   };
+   assignItem(value){
+       this.setState({value:value});
+       console.log('You clicked: ' + value)
+   }
   render() {
     return (
       <span className="btn-group">
            { this.props.options.map(([text, value], i) => (
 
    	    <button type="button" className="btn btn-default" id={ text } key={ text }
-   	      value={ value } onclick={this.handleChange}>
+   	      value={ value } onClick={this.assignItem.bind(this, value)}>
        	    { value }</button>
 
            ))

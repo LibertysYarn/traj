@@ -4,6 +4,15 @@ import React, { Component } from 'react';
 //TODO call values from an array/object?
 //Reusable single cell input form
 class InputGroup extends Component {
+  constructor(props){
+      super(props);
+      this.state = {name: ''};
+   }
+   setField(e) {
+     this.setState({[e.target.name]: e.target.value});
+     console.log('you typed: ' + this.state.value);
+   }
+
   render() {
   return (
             <label className='label-name' htmlFor={this.props.id}>{this.props.title}<br />
@@ -11,7 +20,8 @@ class InputGroup extends Component {
                   placeholder={this.props.title} className='form-control'
                 step={this.props.step} min={this.props.min} max={this.props.max}
               size={this.props.size} maxLength={this.props.maxlength}
-            defaultValue={this.props.defaultValue}/>
+            defaultValue={this.props.defaultValue}
+          onClick={this.setField.bind(this)}/>
             </label>
         )
     }
